@@ -18,8 +18,17 @@ hide_st_style = """
             header {visibility: hidden;}
             </style>
             """
-            
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] {
+background: linear-gradient(90deg, #ffffff, #f1f1f1)
+}
+</style>
+"""
+           
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.image("logovetorizada.png", width=90)
 
