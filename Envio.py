@@ -142,6 +142,8 @@ try:
                     # Envio do e-mail
                     connection.send_message(mimemsg)
                     connection.quit()
+                    
+                    time.sleep(2)
 
                     st.success("E-mail do ticket enviado com sucesso!")
                         
