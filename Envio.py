@@ -153,7 +153,6 @@ try:
 
         if not any(row[41] == "" for row in rows):
           st.warning('Todos os tickets já foram enviados!')
-          st.info('Recarregue a página para verificar novos chamados para envio.')
 
     except gspread.WorksheetNotFound:
         st.error(f"Erro: A guia '{worksheet_name}' não foi encontrada na planilha '{spreadsheet_name}'.")
@@ -164,3 +163,5 @@ except gspread.SpreadsheetNotFound:
     st.error(f"Erro: A planilha '{spreadsheet_name}' não foi encontrada.")
 except Exception as e:
     st.error(f"Erro ao abrir a planilha: {e}")
+
+st.info('Recarregue a página para verificar novos chamados para envio.')
