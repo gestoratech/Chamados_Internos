@@ -6,8 +6,11 @@ from email.mime.text import MIMEText
 import smtplib
 import time
 
+# Realizando a configuração do titulo e logo da empresa dentro do site
 st.set_page_config(page_title="Gestora Contabilidade - Envio de Chamados", page_icon="logovetorizada.png", layout="wide")
 logo = "logovetorizada.png"
+
+# Retirando algumas particularidades do Streamlit=
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -15,6 +18,7 @@ hide_st_style = """
             header {visibility: hidden;}
             </style>
             """
+            
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.image("logovetorizada.png", width=90)
@@ -150,10 +154,10 @@ try:
                     "ticket": ticket_envio,
                     "tecnico": tecnico
                 })
-
+        # Lendo a planilha inteira para identificar as variáveis
         if not any(row[41] == "" for row in rows):
           st.warning('Todos os tickets já foram enviados!')
-
+    # Exeções direcionada as conexões
     except gspread.WorksheetNotFound:
         st.error(f"Erro: A guia '{worksheet_name}' não foi encontrada na planilha '{spreadsheet_name}'.")
     except Exception as e:
