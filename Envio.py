@@ -23,7 +23,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] {
-background: radial-gradient(circle at 50% 0%,#212121, #4f4f4f)
+background: linear-gradient(90deg, #ffffff, #f1f1f1)
 }
 </style>
 """
