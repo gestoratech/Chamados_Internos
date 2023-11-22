@@ -14,7 +14,7 @@ logo = "logovetorizada.png"
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
+            footer {display: none !important;}
             header {visibility: hidden;}
             </style>
             """
