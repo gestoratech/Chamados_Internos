@@ -38,7 +38,7 @@ st.title(":blue[Gestora Contabilidade]")
 # Subtítulo e breve descrição
 st.header(
     """
-  Seja muito bem-vindo ao sistema de envio de chamados internos da :blue[Gestora Contabilidade].
+  Seja muito bem-vindo ao sistema de envio de chamados internos da :blue[Gestora Contabilidade]
   """
 )
 
@@ -143,9 +143,9 @@ try:
                     connection.send_message(mimemsg)
                     connection.quit()
                     
-                    with st.spinner ('Enviando...'):
-                        time.sleep(4)
-                        st.success("E-mail do ticket enviado com sucesso!")
+                    time.sleep(2)
+
+                    st.success("E-mail do ticket enviado com sucesso!")
                         
                     time.sleep(2)
                     
@@ -155,7 +155,7 @@ try:
                         st.experimental_rerun()
 
                 else:
-                    st.write("Não há nenhum e-mail fornecido.")
+                    st.write("Não há nenhum e-mail fornecido")
                     
                 st.write("___")
 
@@ -167,7 +167,7 @@ try:
                 })
         # Lendo a planilha inteira para identificar as variáveis
         if not any(row[41] == "" for row in rows):
-          st.warning('Todos os tickets já foram enviados!')
+          st.warning('Todos os tickets já foram enviados')
     # Exeções direcionada as conexões
     except gspread.WorksheetNotFound:
         st.error(f"Erro: A guia '{worksheet_name}' não foi encontrada na planilha '{spreadsheet_name}'.")
@@ -175,8 +175,8 @@ try:
         st.error(f"Erro ao ler os dados da guia: {e}")
 
 except gspread.SpreadsheetNotFound:
-    st.error(f"Erro: A planilha '{spreadsheet_name}' não foi encontrada.")
+    st.error(f"Erro: A planilha '{spreadsheet_name}' não foi encontrada")
 except Exception as e:
     st.error(f"Erro ao abrir a planilha: {e}")
 
-st.info('Recarregue a página para verificar novos chamados para envio.')
+st.info('Recarregue a página para verificar novos chamados para envio')
