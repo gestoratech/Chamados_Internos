@@ -143,9 +143,9 @@ try:
                     connection.send_message(mimemsg)
                     connection.quit()
                     
-                    time.sleep(2)
-
-                    st.success("E-mail do ticket enviado com sucesso!")
+                    with st.spinner ('Enviando...'):
+                        time.sleep(2)
+                        st.success("E-mail do ticket enviado com sucesso!")
                         
                     time.sleep(2)
                     
