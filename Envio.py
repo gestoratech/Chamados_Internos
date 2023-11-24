@@ -144,7 +144,7 @@ try:
                     connection.quit()
                     
                     with st.spinner ('Enviando...'):
-                        time.sleep(2)
+                        time.sleep(4)
                         st.success("E-mail do ticket enviado com sucesso!")
                         
                     time.sleep(2)
