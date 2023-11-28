@@ -62,7 +62,7 @@ def criar_grafico(df, ano_selecionado):
     atendimentos_por_tecnico_mes_filtrado = atendimentos_por_tecnico_mes[atendimentos_por_tecnico_mes['Ano'] == int(ano_selecionado)]
 
     fig = px.bar(atendimentos_por_tecnico_mes_filtrado, x='Mês', y='Número de Atendimentos', color='Tecnico',
-                    title=f'Número de Atendimentos por Técnico (Por Mês e Ano: {ano_selecionado})',
+                    title=f'Número de Atendimentos por Técnico',
                     labels={'Número de Atendimentos': 'Atendimentos'}, barmode='stack')
 
     return fig
@@ -74,7 +74,7 @@ def criar_grafico_pizza(df, ano_selecionado):
     atendimentos_por_tecnico_mes = df[df['Ano'] == int(ano_selecionado)].groupby(['Mês', 'Tecnico']).size().reset_index(name='Número de Atendimentos')
 
     fig = px.pie(atendimentos_por_tecnico_mes, values='Número de Atendimentos', names='Tecnico',
-                 title=f'Totais de Atendimentos por Técnico (Ano: {ano_selecionado})',
+                 title=f'Totais de Atendimentos por Técnico',
                  labels={'Número de Atendimentos': 'Atendimentos'}, hole=0.3)
 
     return fig
