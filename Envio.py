@@ -10,6 +10,7 @@ import time
 st.set_page_config(page_title="Gestora Contabilidade - Envio de Chamados", page_icon="logovetorizada.png", layout="wide")
 logo = "logovetorizada.png"
 
+
 # Retirando algumas particularidades do Streamlit=
 hide_st_style = """
             <style>
@@ -38,7 +39,7 @@ st.title(":blue[Gestora Contabilidade]")
 # Subtítulo e breve descrição
 st.header(
     """
-  Seja muito bem-vindo ao sistema de envio de chamados internos da :blue[Gestora Contabilidade]
+  Envio dos chamados internos da :blue[Gestora Contabilidade]
   """
 )
 
